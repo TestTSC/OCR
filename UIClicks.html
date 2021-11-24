@@ -1,0 +1,82 @@
+<HTML><HEAD title="UI Click Methods">
+<script language="JavaScript" type="text/JavaScript">
+function onButtonClick(elem)
+{
+	document.getElementById("tbxLog").value = elem.id + ".Clicked()";
+}
+
+function onKeyboardInput(elem)
+{
+	document.getElementById("tbxLog").value = elem.id + ".SetText(" + elem.value + ")";
+}
+</script>
+</HEAD>
+<BODY>
+<P>
+<TABLE id="tblKeys" borderColor=#000000 cellSpacing=0 cellPadding=1 rules=all width="100%" border=1 frame=border>
+<THEAD>
+<TR>
+<TH>&nbsp;</TH>
+<TH align="left">&nbsp;<input type="text" onkeyup="onKeyboardInput(this)" id="tbxTop"/>&nbsp;</TH>
+<TH>&nbsp;</TH></TR></THEAD>
+<TBODY>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;Keys top</TD>
+<TD>&nbsp;</TD></TR>
+<TR>
+<TD align=right>&nbsp;<input type="text" onkeyup="onKeyboardInput(this)" id="tbxLeft"/></TD>
+<TD align=left>&nbsp;Keys left</TD>
+<TD>&nbsp;</TD></TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD align=right>Keys right&nbsp;&nbsp;</TD>
+<TD align=left>&nbsp;<input type="text" onkeyup="onKeyboardInput(this)" id="tbxRight"/></TD></TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;Keys bottom</TD>
+<TD>&nbsp;</TD></TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>
+<P align=left>&nbsp;<input type="text" onkeyup="onKeyboardInput(this)" id="tbxBottom"/></P></TD>
+<TD>&nbsp;</TD></TR></TBODY></TABLE></P></BODY></HTML>
+
+<P>
+<P>
+<P>
+<TABLE id="tblClicks" borderColor=#000000 cellSpacing=0 cellPadding=1 rules=all width="100%" border=1 frame=border>
+<THEAD>
+<TR>
+<TH>&nbsp;</TH>
+<TH align="left">&nbsp;<button id="btnTop" onclick="onButtonClick(this)">Click Me</button>&nbsp;</TH>
+<TH>&nbsp;</TH></TR></THEAD>
+<TBODY>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;Click top</TD>
+<TD>&nbsp;</TD></TR>
+<TR>
+<TD align=right>&nbsp;<button id="btnLeft"  onclick="onButtonClick(this)">Click Me</button>&nbsp;</TD>
+<TD align=left>&nbsp;Click left</TD>
+<TD>&nbsp;</TD></TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD align=right>&nbsp;Click right&nbsp;&nbsp;</TD>
+<TD align=left>&nbsp;<button id="btnRight"  onclick="onButtonClick(this)">Click Me</button>&nbsp;</TD></TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;Click bottom</TD>
+<TD>&nbsp;</TD></TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>
+<P align=left>&nbsp;<button id="btnBottom"  onclick="onButtonClick(this)">Click Me</button></P></TD>
+<TD>&nbsp;</TD></TR></TBODY></TABLE></P></BODY></HTML>
+<P/>
+<P/>
+<P/>
+Events:
+<P/>
+<textarea id="tbxLog"/>
+
